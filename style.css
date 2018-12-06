@@ -287,15 +287,15 @@ input,
 select,
 optgroup,
 textarea {
-  color: #444;
-  font-family: "Noto Serif", serif;
-  font-size: 16px;
-  font-size: 1rem;
+  color: #fefefe;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 1.8;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #32373c;
+  color: #fefefe;
   clear: both;
 }
 
@@ -318,7 +318,7 @@ address {
 }
 
 pre {
-  background: #eee;
+  background: #67648F;
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
   font-size: 0.9375rem;
@@ -336,12 +336,12 @@ code, kbd, tt, var {
 }
 
 abbr, acronym {
-  border-bottom: 1px dotted #666;
+  border-bottom: 1px dotted #D5D4E2;
   cursor: help;
 }
 
 mark, ins {
-  background: #fff9c0;
+  background: #D5D4E2;
   text-decoration: none;
 }
 
@@ -358,7 +358,7 @@ big {
 	font-size: 38px;
 	font-weight: bold;
 	line-height: 1.2;
-	color: #333332;
+	color: #fefefe;
 }
 
 .site-title a {
@@ -376,7 +376,7 @@ big {
 	font-weight: inherit;
 	line-height: 1.4;
 	word-wrap: break-word;
-	color: #929292;
+	color: #fefef2;
 }
 /*--------------------------------------------------------------
 # Elements
@@ -393,7 +393,7 @@ html {
 }
 
 body {
-  background: #fff;
+  background: #726f9f;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote, q {
@@ -460,8 +460,8 @@ input[type="submit"] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
   border-radius: 3px;
-  background: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
+  background: #F1F1F5;
+  color: rgba(245, 245, 245, 0.8);
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1;
@@ -541,15 +541,15 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #0073aa;
+  color: #F1F1F5;
 }
 
 a:visited {
-  color: #333;
+  color: #fff;
 }
 
 a:hover, a:focus, a:active {
-  color: #00a0d2;
+  color: #E3E2EC;
 }
 
 a:focus {
@@ -648,7 +648,7 @@ a:hover, a:active {
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
-  border-bottom: 1px solid #111;
+  border-bottom: 1px solid #fefefe;
 	margin: 0 auto 60px;
   max-width: 636px;
 	overflow: hidden;
@@ -824,7 +824,9 @@ a:hover, a:active {
 .site-info,
 .post-navigation,
 .page-navigation,
-.comments-area,
+.comments-area .comments-title,
+.comments-area .comment-list,
+.comments-area .comment-respond,
 .not-found .page-content,
 .search .entry-summary {
   margin: 1.5em auto;
@@ -842,10 +844,15 @@ a:hover, a:active {
 }
 
 .entry-footer{
-  color: #aaa;
+  color: #fefef2;
   font-size: 90%;
   padding-bottom: 40px;
-  border-bottom: 1px solid #111;
+  border-bottom: 1px solid #fff;
+}
+
+.comments-area {
+  background-color: #67648F;
+  padding: 30px 0;
 }
 
 @media screen and (min-width: 664px) {
