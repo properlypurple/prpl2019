@@ -14,6 +14,10 @@
   max-width: 100%;
 }
 
+.entry-content > div:first-child {
+  margin-top: 0;
+}
+
 .entry-content ul,
 .entry-content ol {
   margin: 1.5em auto;
