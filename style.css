@@ -465,7 +465,7 @@ input[type="reset"],
 input[type="submit"] {
   border: 2px solid transparent;
   border-radius: 3px;
-  background: #44435F;
+  background: rgba(0,0,0,0.5);
   color: #fefefe;
   font-size: 16px;
   font-size: 1rem;
@@ -477,8 +477,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border-color: #ccc #bbb #aaa;
-  background: #757299;
+  background: rgba(0,0,0,0.3);
   color: #ffffff;
 }
 
@@ -1030,6 +1029,84 @@ a:hover, a:active {
 .bypostauthor {
   display: block;
 }
+
+
+.comment-body {
+  position: relative;
+  border: 1px solid rgba(0,0,0,0.2);
+  margin-bottom: 30px;
+  padding: 25px 25px 25px 110px;
+  min-height: 80px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.comment-body .avatar {
+  position: absolute;
+  left: 25px;
+  max-width: 60px;
+  border-radius: 50%;
+}
+
+.comment-body .fn {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.comment-body .fn span {
+  display: none
+}
+
+.comment-body .comment-meta {
+  font-size: 12px;
+  font-size: 0.75rem;
+  margin-bottom: 20px
+}
+
+.comment-body .comment-meta a {
+  text-decoration: none
+}
+
+.comment-body .comment-meta a:hover {
+  text-decoration: underline
+}
+
+#cancel-comment-reply-link {
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+.comment-awaiting-moderation {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  text-decoration: underline
+}
+
+#comments .children {
+  padding-left: 30px;
+  margin-left: 0;
+}
+
+#comments .children .comment-body::before {
+  content: "";
+  display: block;
+  height: 30px;
+  position: absolute;
+  top: -30px;
+  left: 52px;
+  width: 1px;
+  background: rgba(0,0,0,0.2);
+}
+
+.comment-body .comment-meta .edit-link::before {
+  content: "  \2014  ";
+}
+
+#comments .comment-respond {
+  
+}
+
 
 /*--------------------------------------------------------------
 # Infinite scroll
