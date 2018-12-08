@@ -109,23 +109,23 @@ dfn {
 }
 
 h1 {
-  font-size: 2.44em;
+  font-size: 2.074em;
   margin: 0.67em 0;
   line-height: 1.4;
 }
 
 h2 {
-  font-size: 1.95em;
+  font-size: 1.728em;
   line-height: 1.4;
 }
 
 h3 {
-  font-size: 1.56em;
+  font-size: 1.44em;
   line-height: 1.4;
 }
 
 h4 {
-  font-size: 1.25em;
+  font-size: 1.2em;
   line-height: 1.5;
 }
 
@@ -295,6 +295,8 @@ textarea {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: 300;
   color: #fefefe;
   clear: both;
 }
@@ -393,6 +395,7 @@ html {
 *:after {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   box-sizing: inherit;
+  transition: all 0.3s ease;
 }
 
 body {
@@ -541,6 +544,10 @@ select {
 
 textarea {
   width: 100%;
+}
+
+label {
+  display: block;
 }
 
 
@@ -761,6 +768,10 @@ a:hover, a:active {
 
 .footer-navigation a {
   font-size: 0;
+}
+
+.footer-navigation a:hover::before {
+  
 }
 
 .footer-navigation a::before {
