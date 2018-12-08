@@ -13,6 +13,14 @@
 
 <footer id="colophon" class="site-footer">
 	<div class="site-info">
+		<nav id="footer-navigation" class="footer-navigation">
+			<?php
+				wp_nav_menu( array(
+					'theme_location' => 'footer-menu',
+					'menu_id'        => 'footer-menu',
+				) );
+			?>
+		</nav>
 		<a href="<?php echo esc_url( __( 'https://wordpress.org/', '_s' ) ); ?>"><?php
 			/* translators: %s: CMS name, i.e. WordPress. */
 			printf( esc_html__( 'Proudly powered by %s', 'gutenbergtheme' ), 'WordPress' );

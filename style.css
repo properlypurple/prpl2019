@@ -558,6 +558,8 @@ textarea {
   line-height: 1;
   justify-content: space-between;
   padding: 10px 16px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.1);
 }
 
 .admin-bar .site-header {
@@ -567,6 +569,13 @@ textarea {
 @media (max-width: 768px) {
   .admin-bar .site-header {
     top: 46px;
+  }
+}
+@media (max-width: 600px) {
+  .admin-bar .site-header,
+  .site-header {
+    bottom: 0;
+    top: inherit;
   }
 }
 
@@ -633,6 +642,8 @@ a:hover, a:active {
 	left: -999em;
 	z-index: 99999;
   text-align: left;
+  border-radius: 8px;
+  background-color: #fefefe;
 }
 
 .main-navigation ul ul ul {
@@ -646,13 +657,18 @@ a:hover, a:active {
 }
 
 .main-navigation ul ul a {
-	width: 200px;
+  width: 160px;
+  padding: 10px 20px;
+  text-align: center;
+  color: #726f9f;
 }
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
   display: block;
-	left: auto;
+  left: auto;
+  margin-left: -50%;
+  margin-top: 5px;
 }
 
 .main-navigation li {
@@ -678,7 +694,8 @@ a:hover, a:active {
 	.menu-toggle,
 	.main-navigation.toggled ul {
 		display: block;
-    margin: 0 auto;
+    margin: 0;
+    float: right;
 	}
 }
 
@@ -725,6 +742,69 @@ a:hover, a:active {
 	flex: 1 0 50%;
 }
 
+/* Social menu */
+.footer-navigation {
+
+}
+
+.footer-navigation ul {
+  text-align: center;
+  margin: 0 auto 20px;;
+}
+
+.footer-navigation li {
+  list-style: none;
+  padding: 0;
+  margin: 0 6px;
+  display: inline-block;
+}
+
+.footer-navigation a {
+  font-size: 0;
+}
+
+.footer-navigation a::before {
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  padding: 8px 8px 6px;
+  border: 2px solid;
+  font-family: monospace;
+}
+
+.footer-navigation a[href*="facebook.com"]::before {
+  content: 'fb';
+}
+
+.footer-navigation a[href*="twitter.com"]::before {
+  content: 'tw';
+}
+
+.footer-navigation a[href*="github.com"]::before {
+  content: 'gh';
+}
+
+.footer-navigation a[href*="soundcloud.com"]::before {
+  content: 'sc';
+}
+
+.footer-navigation a[href*="instagram.com"]::before {
+  content: 'ig';
+}
+
+.footer-navigation a[href*="plus.google.com"]::before {
+  content: 'gp';
+}
+
+.footer-navigation a[href*="queer.party"]::before {
+  content: 'ma';
+}
+
+.footer-navigation a[href*="pinterest"]::before {
+  content: 'pi';
+}
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -830,7 +910,7 @@ a:hover, a:active {
 # Content
 --------------------------------------------------------------*/
 #page {
-  margin: 0 auto;
+  margin: 140px auto 0;
   max-width: 100%;
 }
 
@@ -839,8 +919,11 @@ a:hover, a:active {
 }
 
 .site-footer {
-  margin: 1em 0;
+  margin: 1em 0 0;
+  padding: 1.5em 0 2.5em;
   opacity: 0.5;
+  text-align: center;
+  background: rgba(0,0,0,0.1);
 }
 
 /*--------------------------------------------------------------
@@ -864,11 +947,11 @@ a:hover, a:active {
   margin: 1.5em 0 0;
 }
 
-.home .entry-content,
+/* .home .entry-content,
 .home .hentry,
 .home .entry-header {
   margin: 0;
-}
+} */
 
 .page-links {
   clear: both;
@@ -886,7 +969,7 @@ a:hover, a:active {
 .comments-area .comment-respond,
 .not-found .page-content,
 .search .entry-summary {
-  margin: 1.5em auto;
+  margin: 1.5em auto 0;
   padding-left: 14px;
   padding-right: 14px;
   max-width: 636px;
@@ -904,7 +987,6 @@ a:hover, a:active {
   color: #fefef2;
   font-size: 90%;
   padding-bottom: 40px;
-  border-bottom: 1px solid #fff;
 }
 
 .comments-area {
@@ -1052,30 +1134,4 @@ object {
 /*--------------------------------------------------------------
 # Utility
 --------------------------------------------------------------*/
-.entry-content .fullscreen {
-  height: 100vh;
-  margin-bottom: 30px;
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
-}
-
-.entry-content .home-posts-list {
-  font-size: 30px;
-  font-size: 1.875rem;
-  list-style: none;
-
-}
-.entry-content .home-posts-list li {
-  margin: 0 0 18px 0;
-  color: #fefefe;
-}
-
-.entry-content .home-posts-list a {
-  text-decoration: none;
-  border: none;
-}
-
-.entry-content .home-posts-list .wp-block-latest-posts__post-date {
-  color: #fefefe;
-  font-size: 16px;
-  font-size: 1rem;
-}
+/* Nothing here yet, frontpage specific styles removed to keep theme generic enough */

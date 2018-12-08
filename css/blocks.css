@@ -12,6 +12,8 @@
 .entry-content > .alignfull {
   margin: 1.5em 0;
   max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .entry-content > div:first-child {
@@ -145,6 +147,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .wp-block-separator {
   margin: 3em auto;
   padding: 0;
+}
+.wp-block-separator.is-style-dots::before {
+  color: #fefefe;
 }
 
 @media screen and (min-width: 768px) {

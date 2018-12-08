@@ -36,6 +36,8 @@ function gutenbergtheme_jetpack_setup() {
 			'comment'    => '.comments-link',
 		),
 	) );
+
+	//add_theme_support( 'jetpack-social-menu' );
 }
 add_action( 'after_setup_theme', 'gutenbergtheme_jetpack_setup' );
 
