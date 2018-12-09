@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Gutenbergtheme
+ * @package Prpl2019theme
  */
 
 ?>
@@ -23,7 +23,7 @@
 		</nav>
 		<a href="<?php echo esc_url( __( 'https://wordpress.org/', '_s' ) ); ?>"><?php
 			/* translators: %s: CMS name, i.e. WordPress. */
-			printf( esc_html__( 'Proudly powered by %s', 'gutenbergtheme' ), 'WordPress' );
+			printf( esc_html__( 'Proudly powered by %s', 'prpl2019theme' ), 'WordPress' );
 		?></a>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
