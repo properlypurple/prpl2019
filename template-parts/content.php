@@ -29,6 +29,7 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
+	<?php if ( is_singular() ) : ?>
 	<div class="entry-content">
 		<?php
 			the_content( sprintf(
@@ -54,4 +55,6 @@
 	<footer class="entry-footer">
 		<?php gutenbergtheme_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+
+	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

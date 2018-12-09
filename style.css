@@ -309,6 +309,15 @@ h1, h2, h3, h4, h5, h6 {
   margin: 1em 0;
 }
 
+.entry-header .entry-title a {
+  border: none;
+}
+
+.archive .entry-title,
+.blog .entry-title {
+  margin-bottom: 4px;
+}
+
 dfn, cite, em, i {
   font-style: italic;
 }
