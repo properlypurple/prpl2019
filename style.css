@@ -315,6 +315,8 @@ dfn, cite, em, i {
 
 blockquote {
   margin: 0 1.5em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
 }
 
 address {
@@ -565,7 +567,7 @@ label {
   justify-content: space-between;
   padding: 10px 16px;
   box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
-  background: rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.2);
 }
 
 .admin-bar .site-header {
@@ -582,6 +584,7 @@ label {
   .site-header {
     bottom: 0;
     top: inherit;
+    background: rgba(0,0,0,0.7);
   }
 }
 
@@ -634,85 +637,39 @@ a:hover, a:active {
 }
 
 .main-navigation ul {
-	display: none;
 	list-style: none;
 	margin: 0;
-	padding-left: 0;
-}
-
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
-  text-align: left;
-  border-radius: 8px;
-  background-color: #fefefe;
-}
-
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
-}
-
-.main-navigation ul ul a {
-  width: 160px;
-  padding: 10px 20px;
-  text-align: center;
-  color: #726f9f;
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-  display: block;
-  left: auto;
-  margin-left: -50%;
-  margin-top: 5px;
+  padding-left: 0;
+  
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 .main-navigation li {
 	position: relative;
 }
 
-.main-navigation .nav-menu > li:not(:first-of-type)::before {
-  content: '\b7';
+.main-navigation li:not(:first-of-type)::before {
+  content: "\b7";
 }
 
 .main-navigation a {
 	display: inline-block;
   text-decoration: none;
   border: none;
+  margin: 0 .3em;
 }
-
-.menu-toggle {
-  padding: 1em;
-}
-
 @media screen and (max-width: 37.5em) {
-	/* Small menu. */
-	.menu-toggle,
-	.main-navigation.toggled ul {
-		display: block;
-    margin: 0;
-    float: right;
-	}
+  .main-navigation a {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
 }
-
 @media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
+	
 	.main-navigation ul {
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
+    
   }
 
   .main-navigation a {
@@ -755,7 +712,8 @@ a:hover, a:active {
 
 .footer-navigation ul {
   text-align: center;
-  margin: 0 auto 20px;;
+  margin: 0 auto 20px;
+  padding: 0;
 }
 
 .footer-navigation li {
@@ -924,12 +882,18 @@ a:hover, a:active {
   max-width: 100%;
 }
 
+@media (max-width: 600px) {
+  #page {
+    margin-top: 0;
+  }
+}
+
 .site-branding {
   
 }
 
 .site-footer {
-  margin: 1em 0 0;
+  margin: 0;
   padding: 1.5em 0 2.5em;
   opacity: 0.5;
   text-align: center;
@@ -1033,7 +997,7 @@ a:hover, a:active {
 
 .comment-body {
   position: relative;
-  border: 1px solid rgba(0,0,0,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   margin-bottom: 30px;
   padding: 25px 25px 25px 110px;
   min-height: 80px;
@@ -1096,7 +1060,7 @@ a:hover, a:active {
   top: -30px;
   left: 52px;
   width: 1px;
-  background: rgba(0,0,0,0.2);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .comment-body .comment-meta .edit-link::before {
@@ -1104,7 +1068,14 @@ a:hover, a:active {
 }
 
 #comments .comment-respond {
-  
+  padding-top: 30px;
+}
+.comments-area .comment-respond::before {
+  content: " ";
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  margin: 30px auto;
+  max-width: 100px;
+  width: 100px;
 }
 
 

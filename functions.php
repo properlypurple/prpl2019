@@ -166,9 +166,7 @@ function gutenbergtheme_scripts() {
 
 	wp_enqueue_style( 'gutenbergthemeblocks-style', get_template_directory_uri() . '/css/blocks.css' );
 
-	wp_enqueue_style( 'gutenbergtheme-fonts', 'https://fonts.googleapis.com/css?family=Lato:300,300i,400,700' );
-
-	wp_enqueue_script( 'gutenbergtheme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_style( 'gutenbergtheme-fonts', 'https://fonts.googleapis.com/css?family=Lato:300,400,400i|Linden+Hill:400i' );
 
 	wp_enqueue_script( 'gutenbergtheme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

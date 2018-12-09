@@ -128,7 +128,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .wp-block-quote:not(.is-large):not(.is-style-large) {
   border: thin dotted rgba(255, 255, 255, 0.3);
   border-radius: 5px;
-  padding: 20px 18px 0 36px;
+  padding: 20px 18px 20px 36px;
   position: relative;
 }
 .wp-block-quote:not(.is-large):not(.is-style-large)::before {
@@ -138,9 +138,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   font-family: 'Times New Roman', serif;
   font-size: 12rem;
   top: -8rem;
-  left: -1.125rem;
+  left: -2.5rem;
   text-shadow: 2px 2px 0 #726f9f,
-               2px -2px 0 #726f9f,
+               2px -2px 0 #726f9f;
 
 }
 
@@ -148,7 +148,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   border-bottom: 4px solid rgba(255, 255, 255, 0.3);
   border-top: 4px solid rgba(255, 255, 255, 0.3);
   color: #fefefe;
-  
 }
 
 .wp-block-pullquote>p:first-child {
@@ -157,8 +156,19 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 .wp-block-pullquote cite, 
 .wp-block-pullquote footer, 
-.wp-block-pullquote__citation {
+.wp-block-pullquote__citation,
+.wp-block-quote cite {
   color: #fefef1;
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  font-size: 0.9275rem;
+}
+
+.wp-block-pullquote cite::before, 
+.wp-block-pullquote footer::before, 
+.wp-block-pullquote__citation::before,
+.wp-block-quote cite::before {
+  content: "\2014  ";
 }
 
 .wp-block-separator {
