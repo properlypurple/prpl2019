@@ -181,6 +181,12 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   border-color: rgba(255, 255, 255, 0.3);
 }
 
+.entry-content .wp-block-code {
+  border-color: rgba(0,0,0,0.3);
+  padding: 30px;
+  color: #ffffff
+}
+
 @media screen and (min-width: 768px) {
   .wp-block-cover-text p {
     padding: 1.5em 0;
