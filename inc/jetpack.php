@@ -35,11 +35,11 @@ function prpl2019theme_jetpack_setup() {
 			'author'     => '.byline',
 			'comment'    => '.comments-link',
 			),
-		),
-
+		
 		'featured-images' => array(
 			'fallback' => true,
-			) 
+			)
+		)
 		);
 
 	//add_theme_support( 'jetpack-social-menu' );
