@@ -16,7 +16,7 @@
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
 			if ( function_exists( 'get_the_image' ) ) {
-				get_the_image( array( 'scan' => true, 'size' => 'full' ) );
+				get_the_image( array( 'scan' => true, 'size' => 'medium' ) );
 			}
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
