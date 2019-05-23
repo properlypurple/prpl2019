@@ -100,3 +100,46 @@ if ( ! function_exists( 'prpl2019theme_entry_footer' ) ) :
 		);
 	}
 endif;
+
+if ( ! function_exists( 'photos_post_thumbnail' ) ) :
+	/**
+	 * Displays an post thumbnail (if one is set), otherwise displays a blank red square.
+	 *
+	 * Wraps the post thumbnail in an anchor element on index views, or a div element when on single views.
+	 */
+	function photos_post_thumbnail() {
+		$post_id = get_the_id();
+		$image = '';
+		if ( photos_has_post_thumbnail( $post_id ) || is_single() ) {
+			// thumbnail default is 640x640
+			$image = get_the_post_thumbnail( $post_id, 'photos-grid-thumb' );
+		}
+		$class = ( empty( $image ) ) ? "post-no-thumbnail" : "post-thumbnail";
+		$icon = photos_post_icon();
+		if ( is_singular() ) :
+			$image = get_the_post_thumbnail( $post_id, 'photos-featured' );
+			if ( ! empty( $image ) ) : ?>
+
+			<div class="<?php esc_html_e( $class ); ?>">
+				<?php echo $image; // WPCS: XSS OK. ?>
+			</div><!-- .post-thumbnail -->
+
+			<?php endif;
+		elseif ( post_password_required() || is_attachment() ) :  ?>
+
+			<a class="<?php esc_html_e( $class ); ?>" href="<?php the_permalink(); ?>">
+				<?php echo $icon . $image; // WPCS: XSS OK. ?>
+				<span class="screen-reader-text"><?php the_title(); ?></span>
+			</a>
+
+		<?php
+		else : ?>
+			<a class="<?php esc_html_e( $class ); ?>" href="<?php the_permalink(); ?>">
+				<?php echo $icon . $image; // WPCS: XSS OK. ?>
+				<span class="screen-reader-text"><?php the_title(); ?></span>
+			</a>
+
+		<?php
+		endif;
+	}
+endif;
