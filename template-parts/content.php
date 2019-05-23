@@ -15,6 +15,9 @@
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
+			if ( function_exists( 'get_the_image' ) ) {
+				get_the_image();
+			}
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
