@@ -115,7 +115,7 @@ if ( ! function_exists( 'photos_post_thumbnail' ) ) :
 			$image = get_the_post_thumbnail( $post_id, 'photos-grid-thumb' );
 		}
 		$class = ( empty( $image ) ) ? "post-no-thumbnail" : "post-thumbnail";
-		$icon = photos_post_icon();
+		$icon = '';
 		if ( is_singular() ) :
 			$image = get_the_post_thumbnail( $post_id, 'photos-featured' );
 			if ( ! empty( $image ) ) : ?>
