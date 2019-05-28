@@ -34,6 +34,10 @@ if ( ! function_exists( 'prpl2019theme_setup' ) ) :
 		 * provide it for us.
 		 */
 		add_theme_support( 'title-tag' );
+		set_post_thumbnail_size( 320, 320, true );
+		// Double-sized for retina
+		add_image_size( 'prpl-grid-thumb', 640, 640, true );
+		add_image_size( 'prpl-featured', 2040, 9999, false );
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.

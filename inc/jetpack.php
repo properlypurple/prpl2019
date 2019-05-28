@@ -64,7 +64,7 @@ function prpl2019theme_infinite_scroll_render() {
  * Custom function to check for a post thumbnail;
  * If Jetpack is not available, fall back to has_post_thumbnail()
  */
-function photos_has_post_thumbnail( $post = null ) {
+function prpl_has_post_thumbnail( $post = null ) {
 	if ( function_exists( 'jetpack_has_featured_image' ) ) {
 		return jetpack_has_featured_image( $post );
 	} else {
