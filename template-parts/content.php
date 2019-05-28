@@ -10,9 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="entry-thumbnail">
-		<?php prpl_post_thumbnail(); ?>
-	</div>
+	<?php prpl_post_thumbnail(); ?>
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :

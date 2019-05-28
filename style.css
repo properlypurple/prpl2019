@@ -997,7 +997,7 @@ a:hover, a:active {
   display: flex;
   flex-wrap: wrap;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 60px;
 }
 
 .archive .page-header,
@@ -1009,8 +1009,18 @@ a:hover, a:active {
 .archive .site-main .post,
 .blog .site-main .post {
   position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+.archive .site-main .post-thumbnail,
+.blog .site-main .post-thumbnail {
+  width: 100%;
 }
 
+.archive .site-main .post-thumbnail:hover img,
+.blog .site-main .post-thumbnail:hover img {
+  filter: brightness(0.7);
+}
 .archive .post .entry-header,
 .blog .post .entry-header{
   margin: 0;
@@ -1032,6 +1042,7 @@ a:hover, a:active {
 .archive .post img,
 .blog .post img {
   margin: 0;
+  width: 100%;
   display: block;
 }
 
