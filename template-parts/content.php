@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php prpl_post_thumbnail(); ?>
+	<?php prpl2019theme_post_thumbnail(); ?>
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :

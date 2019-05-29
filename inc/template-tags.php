@@ -101,21 +101,21 @@ if ( ! function_exists( 'prpl2019theme_entry_footer' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'prpl_post_thumbnail' ) ) :
+if ( ! function_exists( 'prpl2019theme_post_thumbnail' ) ) :
 	/**
 	 * Displays an post thumbnail (if one is set), otherwise displays a blank red square.
 	 *
 	 * Wraps the post thumbnail in an anchor element on index views, or a div element when on single views.
 	 */
-	function prpl_post_thumbnail() {
+	function prpl2019theme_post_thumbnail() {
 		$post_id = get_the_id();
 		$image = '';
-		if ( prpl_has_post_thumbnail( $post_id ) || is_single() ) {
+		if ( prpl2019theme_has_post_thumbnail( $post_id ) || is_single() ) {
 			// thumbnail default is 640x640
 			$image = get_the_post_thumbnail( $post_id, 'prpl-grid-thumb' );
 		}
 		$class = ( empty( $image ) ) ? "post-no-thumbnail" : "post-thumbnail";
-		$icon = '';
+		$icon = prpl2019theme_post_icon();
 		if ( is_singular() ) :
 			$image = get_the_post_thumbnail( $post_id, 'prpl-featured' );
 			if ( ! empty( $image ) ) : ?>
