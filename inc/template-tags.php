@@ -136,7 +136,7 @@ if ( ! function_exists( 'prpl2019theme_post_thumbnail' ) ) :
 		else : ?>
 			<a class="<?php esc_html_e( $class ); ?>" href="<?php the_permalink(); ?>">
 				<?php echo $icon . $image; // WPCS: XSS OK. ?>
-				<span class="screen-reader-</div>text"><?php the_title(); ?></span>
+				<span class="screen-reader-text"><?php the_title(); ?></span>
 			</a>
 
 		<?php
