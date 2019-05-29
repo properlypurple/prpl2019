@@ -117,12 +117,12 @@ if ( ! function_exists( 'prpl2019theme_post_thumbnail' ) ) :
 		$class = ( empty( $image ) ) ? "post-no-thumbnail" : "post-thumbnail";
 		$icon = prpl2019theme_post_icon();
 		if ( is_singular() ) :
-			$image = get_the_post_thumbnail( $post_id, 'prpl-featured' );
-			if ( ! empty( $image ) ) : ?>
+			//$image = get_the_post_thumbnail( $post_id, 'prpl-featured' );
+			//if ( ! empty( $image ) ) : ?>
 
-			<div class="<?php esc_html_e( $class ); ?>">
-				<?php echo $image; // WPCS: XSS OK. ?>
-			</div><!-- .post-thumbnail -->
+			<!-- <div class="<?php //esc_html_e( $class ); ?>"> -->
+				<?php //echo $image; // WPCS: XSS OK. ?>
+			<!-- </div>.post-thumbnail -->
 
 			<?php endif;
 		elseif ( post_password_required() || is_attachment() ) :  ?>
