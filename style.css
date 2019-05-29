@@ -1013,8 +1013,12 @@ a:hover, a:active {
   width: 100%;
 }
 .archive .site-main .post-thumbnail,
-.blog .site-main .post-thumbnail {
+.blog .site-main .post-thumbnail,
+.archive .site-main .post-no-thumbnail,
+.blog .site-main .post-no-thumbnail {
+  display: block;
   width: 100%;
+  height: 100%;
 }
 
 .archive .site-main .post-thumbnail:hover img,
@@ -1027,7 +1031,9 @@ a:hover, a:active {
   position: absolute;
   bottom: 0;
   left: 0;
+  right: 0;
   width: 100%;
+  max-width: 100%;
   text-align: center;
   text-shadow: 0 0 .25em rgba(0,0,0,.75);
   padding: 10px 10px;
