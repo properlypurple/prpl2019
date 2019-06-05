@@ -1098,6 +1098,11 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+
+.comment-list {
+  list-style-type: none;
+}
+
 .comment-content a {
   word-wrap: break-word;
 }
